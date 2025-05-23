@@ -7,6 +7,25 @@ let imgSrc = "";
 function handleFormSubmit(event) {
   event.preventDefault();
 
+  // function to handle resetting the form and ui and also clears out the messages
+  function handleReset() {
+    document.querySelector(".output").textContent = "";
+    document.querySelector(".userNote").textContent = "";
+
+    // hides the smile faces
+    let moodImage = document.querySelector(".moodImage");
+    moodImage.src = "";
+    moodImage.alt = "";
+    moodImage.style.display = "none";
+
+    // resets background color
+    document.body.style.backgroundColor = "#5998ea";
+
+    document.querySelector("#moodForm").reset(); // resets form
+  }
+
+  document.querySelector("#resetBtn").addEventListener("click", handleReset); // event listener for reset button
+
   // got the values using dot notation
   let mood = document.querySelector("#mood").value;
   let note = document.querySelector("#note").value;
