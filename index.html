@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood-Matcher</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Mood Matcher</h1>
+      <form id="moodForm">
+        <label for="mood">Select your mood:</label>
+        <select id="mood">
+          <option value="">--Choose one--</option>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="calm">Calm</option>
+        </select>
+
+        <label for="note">Why do you feel this way?</label>
+        <input type="text" id="note" placeholder="Type your reason..." />
+
+        <button type="submit">Submit</button>
+        <br /><br />
+        <input type="reset" value=" Reset form" />
+      </form>
+
+      <div class="result">
+        <p class="output"></p>
+        <p class="userNote"></p>
+        <img class="moodImage" src="" alt="" style="display: none" />
+      </div>
+    </div>
+    <script src="api.js"></script>
+  </body>
+</html>
